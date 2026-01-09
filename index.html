@@ -1,0 +1,746 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Specialized Rabbit Boarding in Sonoma County</title>
+  <link href="https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    @font-face {
+      font-family: 'AR Kaisho';
+      src: local('Hiragino Mincho ProN'), local('Yu Mincho'), local('MS Mincho');
+      font-weight: normal;
+      font-style: normal;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Darker Grotesque', -apple-system, BlinkMacSystemFont, sans-serif;
+      line-height: 1.6;
+      color: #2a2a2a;
+      background: #f5f1e8;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 40px;
+    }
+
+    h1, h2 {
+      font-family: 'AR Kaisho', 'Hiragino Mincho ProN', serif;
+      font-weight: 400;
+    }
+
+    /* Hero Section - Cream */
+    #hero {
+      background: #f5f1e8;
+      color: #2a2a2a;
+      padding: 120px 20px 80px;
+      display: flex;
+      align-items: center;
+    }
+
+    #hero .container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: center;
+    }
+
+    .intro-text h1 {
+      font-size: 5rem;
+      margin-bottom: 30px;
+      line-height: 1.1;
+      letter-spacing: -0.01em;
+    }
+
+    .intro-text p {
+      font-size: 1.4rem;
+      margin-bottom: 40px;
+      color: #4a4a4a;
+      font-weight: 400;
+    }
+
+    .badge {
+      display: inline-block;
+      background: #d4e5d4;
+      color: #2a2a2a;
+      padding: 10px 24px;
+      border-radius: 50px;
+      font-size: 1rem;
+      margin-bottom: 30px;
+      letter-spacing: 0.05em;
+      font-weight: 600;
+      transition: background 0.3s ease;
+    }
+
+    .badge:hover {
+      background: #e8f0e8;
+    }
+
+    .btn {
+      display: inline-block;
+      background: #2a2a2a;
+      color: #f5f1e8;
+      padding: 18px 45px;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1.1rem;
+      transition: transform 0.3s, background 0.3s;
+      letter-spacing: 0.02em;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+      background: #d4e5d4;
+      color: #2a2a2a;
+    }
+
+    .intro-image {
+      position: relative;
+    }
+
+    .intro-image img {
+      width: 100%;
+      border-radius: 30px;
+      box-shadow: 0 30px 80px rgba(0, 0, 0, 0.12);
+      transition: transform 0.3s;
+    }
+
+    .intro-image img:hover {
+      transform: scale(1.02);
+    }
+
+    .intro-image::before {
+      content: '';
+      position: absolute;
+      width: 200px;
+      height: 200px;
+      background: #d4e5d4;
+      border-radius: 50%;
+      bottom: -50px;
+      right: -50px;
+      z-index: -1;
+    }
+
+    /* Visual divider */
+    .wave-divider {
+      width: 100%;
+      height: 100px;
+      background: #f5f1e8;
+      position: relative;
+    }
+
+    .wave-divider svg {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      height: 100px;
+    }
+
+    .wave-divider-2 {
+      width: 100%;
+      height: 100px;
+      background: #e8f0e8;
+      position: relative;
+    }
+
+    .wave-divider-2 svg {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      height: 100px;
+    }
+
+    .wave-divider-3 {
+      width: 100%;
+      height: 100px;
+      background: #d4e5d4;
+      position: relative;
+    }
+
+    .wave-divider-3 svg {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      height: 100px;
+    }
+
+    .wave-divider-4 {
+      width: 100%;
+      height: 100px;
+      background: #f5f1e8;
+      position: relative;
+    }
+
+    .wave-divider-4 svg {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      height: 100px;
+    }
+
+    /* About Section - Light Green */
+    #about {
+      padding: 100px 20px 120px;
+      background: #e8f0e8;
+    }
+
+    #about .container {
+      display: block;
+      max-width: 1200px;
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 400px 1fr;
+      gap: 60px;
+      align-items: start;
+      margin-bottom: 50px;
+    }
+
+    .about-image {
+      position: relative;
+    }
+
+    .about-image img {
+      width: 100%;
+      border-radius: 30px;
+      box-shadow: 0 30px 80px rgba(0, 0, 0, 0.12);
+      transition: transform 0.3s;
+    }
+
+    .about-image img:hover {
+      transform: scale(1.02);
+    }
+
+    #about h2 {
+      font-size: 4rem;
+      margin-bottom: 30px;
+      color: #2a2a2a;
+      letter-spacing: -0.01em;
+    }
+
+    .about-content {
+      max-width: 900px;
+    }
+
+    .about-content p {
+      font-size: 1.3rem;
+      margin-bottom: 25px;
+      color: #4a4a4a;
+      line-height: 1.7;
+    }
+
+    .credentials {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+      margin-top: 0;
+      justify-content: center;
+    }
+
+    .credential-bubble {
+      background: #d4e5d4;
+      padding: 12px 24px;
+      border-radius: 50px;
+      font-size: 1rem;
+      color: #2a2a2a;
+      font-weight: 500;
+      transition: background 0.3s ease;
+    }
+
+    .credential-bubble:hover {
+      background: #e8eaf0;
+    }
+
+    /* Gallery Section - Green */
+    #gallery {
+      padding: 80px 20px;
+      background: #d4e5d4;
+      position: relative;
+    }
+
+    #gallery h2 {
+      font-size: 4rem;
+      margin-bottom: 30px;
+      color: #2a2a2a;
+      letter-spacing: -0.01em;
+    }
+
+    .section-subtitle {
+      max-width: 1000px;
+      font-size: 1.3rem;
+      color: #3a3a3a;
+      margin-bottom: 60px;
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+      margin-top: 60px;
+    }
+
+    .gallery-item {
+      background: #f5f1e8;
+      height: 350px;
+      border-radius: 30px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #4a4a4a;
+      font-size: 1.2rem;
+      overflow: hidden;
+      transition: transform 0.3s;
+    }
+
+    .gallery-item:hover {
+      transform: scale(1.02);
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .instagram-link {
+      margin-top: 40px;
+    }
+
+    /* Services Section - Cream */
+    #services {
+      padding: 130px 20px 120px;
+      background: #f5f1e8;
+    }
+
+    #services h2 {
+      font-size: 4rem;
+      margin-bottom: 20px;
+      color: #2a2a2a;
+      letter-spacing: -0.01em;
+    }
+
+    .location-badge {
+      display: flex;
+      margin-bottom: 30px;
+    }
+
+    .services-intro {
+      max-width: 1000px;
+      font-size: 1.3rem;
+      color: #4a4a4a;
+      line-height: 1.7;
+      margin-bottom: 60px;
+    }
+
+    .services-intro a {
+      color: #2a2a2a;
+      font-weight: 600;
+      text-decoration: underline;
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 40px;
+      margin-top: 60px;
+    }
+
+    .service-card {
+      background: #d4e5d4;
+      padding: 40px;
+      border-radius: 30px;
+      transition: background 0.3s;
+    }
+
+    .service-card:hover {
+      background: #e8f0e8;
+    }
+
+    .service-card h3 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+      color: #2a2a2a;
+      font-weight: 700;
+    }
+
+    .service-card p {
+      color: #3a3a3a;
+      font-size: 1.2rem;
+      line-height: 1.7;
+    }
+
+    .price {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #2a2a2a;
+      margin-top: 20px;
+    }
+
+    /* Booking Section - Light Green */
+    #booking {
+      padding: 80px 20px 120px;
+      background: #e8f0e8;
+      position: relative;
+    }
+
+    #booking h2 {
+      font-size: 4rem;
+      margin-bottom: 50px;
+      color: #2a2a2a;
+      letter-spacing: -0.01em;
+      text-align: center;
+    }
+
+    .booking-content {
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .booking-intro {
+      font-size: 1.3rem;
+      margin-bottom: 50px;
+      color: #4a4a4a;
+      line-height: 1.7;
+      text-align: left;
+    }
+
+    .booking-intro a {
+      color: #2a2a2a;
+      font-weight: 600;
+      text-decoration: underline;
+    }
+
+    .how-it-works-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+      margin-bottom: 60px;
+      max-width: 1000px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .how-step {
+      text-align: left;
+      background: #f5f1e8;
+      padding: 30px;
+      border-radius: 30px;
+      transition: background 0.3s ease;
+    }
+
+    .how-step:hover {
+      background: #e8eaf0;
+    }
+
+    .how-step h3 {
+      font-size: 1.8rem;
+      margin-bottom: 15px;
+      color: #2a2a2a;
+      font-weight: 700;
+    }
+
+    .how-step p {
+      font-size: 1.2rem;
+      color: #3a3a3a;
+      line-height: 1.7;
+    }
+
+    .requirements-section {
+      margin-top: 50px;
+    }
+
+    .requirements-section h3 {
+      font-size: 1.8rem;
+      margin-bottom: 20px;
+      color: #2a2a2a;
+      font-weight: 700;
+    }
+
+    .requirements-section ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    .requirements-section li {
+      font-size: 1.2rem;
+      margin-bottom: 15px;
+      color: #4a4a4a;
+      padding-left: 30px;
+      position: relative;
+      line-height: 1.6;
+    }
+
+    .requirements-section li::before {
+      content: '•';
+      position: absolute;
+      left: 10px;
+      color: #2a2a2a;
+      font-weight: bold;
+    }
+
+    .requirements-section strong {
+      color: #2a2a2a;
+    }
+
+    .cta-button {
+      margin-top: 60px;
+      text-align: left;
+    }
+
+    /* Footer */
+    footer {
+      background: #2a2a2a;
+      color: #f5f1e8;
+      text-align: center;
+      padding: 40px 20px;
+      font-size: 1.1rem;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      #hero .container {
+        grid-template-columns: 1fr;
+        gap: 50px;
+      }
+
+      .intro-text h1 {
+        font-size: 3rem;
+      }
+
+      .intro-text p {
+        font-size: 1.2rem;
+      }
+
+      #services h2,
+      #gallery h2,
+      #booking h2,
+      #about h2 {
+        font-size: 2.5rem;
+      }
+
+      .services-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .intro-image::before {
+        display: none;
+      }
+
+      #about .container {
+        display: block;
+      }
+
+      .about-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+
+      .credentials {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .how-it-works-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .cta-button {
+        text-align: left;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Section 1: Hero - Cream -->
+  <section id="hero">
+    <div class="container">
+      <div class="intro-text">
+        <div class="badge">AVAILABLE FOR BOARDING</div>
+        <h1>Specialized Rabbit Boarding in Sonoma County</h1>
+        <p>Looking for a caring, experienced home for your bun while you're out of town? At my home-based boarding, each bunny receives personalized attention, a safe and enriched environment, and care tailored to their unique needs.</p>
+        <a href="#booking" class="btn">Book Your Bunny's Stay</a>
+      </div>
+      <div class="intro-image">
+        <img src="https://images.unsplash.com/photo-1585110396000-c9ffd4e4b308?w=600&h=700&fit=crop" alt="Cute rabbit">
+      </div>
+    </div>
+  </section>
+
+  <!-- Wave Divider -->
+  <div class="wave-divider">
+    <svg viewBox="0 0 1200 100" preserveAspectRatio="none">
+      <path d="M0,50 Q300,80 600,50 T1200,50 L1200,100 L0,100 Z" fill="#e8f0e8"/>
+    </svg>
+  </div>
+
+  <!-- Section 2: About - Light Green -->
+  <section id="about">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-image">
+          <img src="https://images.unsplash.com/photo-1585110396000-c9ffd4e4b308?w=400&h=500&fit=crop" alt="Soro with rabbit">
+        </div>
+        <div class="about-content">
+          <h2>Hi, I'm Soro 🐰</h2>
+          <p>I'm a trained veterinary technician and lifelong animal lover with a deep passion for rabbit care. I have extensive experience with rabbits—from caring for my own pets to fostering for local shelters—giving me hands-on familiarity with a wide range of personalities, behaviors, and health needs.</p>
+          
+          <p>I understand the unique needs of rabbits, including how to monitor for early signs of GI stasis and stress, provide a calm, enriched environment, and ensure they have ample space to exercise and explore safely. I'm present with the bunnies throughout the day, giving them attentive care and a safe, loving space to thrive.</p>
+        </div>
+      </div>
+      
+      <div class="credentials">
+        <div class="credential-bubble">Veterinary Technician Certificate, SRJC 2019</div>
+        <div class="credential-bubble">Fear Free® Certified, 2019</div>
+        <div class="credential-bubble">Bachelor's in Wildlife Biology, Cal Poly Humboldt 2022</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Wave Divider 2: About to Gallery -->
+  <div class="wave-divider-2">
+    <svg viewBox="0 0 1200 100" preserveAspectRatio="none">
+      <path d="M0,50 Q300,80 600,50 T1200,50 L1200,100 L0,100 Z" fill="#d4e5d4"/>
+    </svg>
+  </div>
+
+  <!-- Section 3: Gallery - Green -->
+  <section id="gallery">
+    <div class="container">
+      <h2>My Cozy Boarding Spaces</h2>
+      <p class="section-subtitle">
+        Take a peek at the cozy, safe boarding spaces where your pets will stay. Clean, spacious, and designed for their comfort.
+      </p>
+      
+      <div class="gallery-grid">
+        <div class="gallery-item">
+          <img src="https://images.unsplash.com/photo-1535241749838-299277b6305f?w=400&h=400&fit=crop" alt="Boarding area">
+        </div>
+        <div class="gallery-item">
+          <img src="https://images.unsplash.com/photo-1425082661705-1834bfd09dca?w=400&h=400&fit=crop" alt="Happy rabbit">
+        </div>
+        <div class="gallery-item">
+          <img src="https://images.unsplash.com/photo-1548767797-d8c844163c4c?w=400&h=400&fit=crop" alt="Small animal care">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Wave Divider 3: Gallery to Services -->
+  <div class="wave-divider-3">
+    <svg viewBox="0 0 1200 100" preserveAspectRatio="none">
+      <path d="M0,50 Q350,20 600,50 T1200,50 L1200,100 L0,100 Z" fill="#f5f1e8"/>
+    </svg>
+  </div>
+
+  <!-- Section 4: Services - Cream -->
+  <section id="services">
+    <div class="container">
+      <h2>Boarding Services</h2>
+      <div class="location-badge">
+        <div class="badge">Forestville Home Boarding</div>
+      </div>
+      <p class="services-intro">
+        Everybunny gets personalized attention, spacious accommodations, fresh food and water daily, and plenty of enrichment activities. Have questions about my boarding services? Send me an email at <a href="mailto:placeholderemail@gmail.com">placeholderemail@gmail.com</a>
+      </p>
+      
+      <div class="services-grid">
+        <div class="service-card">
+          <h3>Single Rabbit Boarding</h3>
+          <p>Spacious enclosures with room to hop and explore, daily exercise time, fresh organic vegetables, and attentive supervision.</p>
+          <div class="price">$35/night</div>
+        </div>
+
+        <div class="service-card">
+          <h3>Bonded Pair Rabbit Boarding</h3>
+          <p>Keep your bonded buns together! Spacious shared enclosures, daily exercise, fresh organic veggies, and care tailored to each bunny's needs.</p>
+          <div class="price">$45/night</div>
+        </div>
+
+        <div class="service-card">
+          <h3>Exotic Small Animal Boarding</h3>
+          <p>Need boarding for your rat, guinea pig, bird, or other exotic small pet? Every pet receives individualized care in a safe, enriching environment. Email me to discuss suitability and custom rates.</p>
+          <div class="price">Custom rates</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Wave Divider 4: Services to Booking -->
+  <div class="wave-divider-4">
+    <svg viewBox="0 0 1200 100" preserveAspectRatio="none">
+      <path d="M0,50 Q250,75 600,50 T1200,50 L1200,100 L0,100 Z" fill="#e8f0e8"/>
+    </svg>
+  </div>
+
+  <!-- Section 5: Booking - Light Green -->
+  <section id="booking">
+    <div class="container">
+      <div class="booking-content">
+        <h2>Booking & Requirements</h2>
+        <p class="booking-intro">
+          Booking a stay is simple—just get in touch via email at <a href="mailto:placeholderemail@gmail.com">placeholderemail@gmail.com</a> to reserve your bunny's spot. To ensure a smooth, stress-free experience for every guest, please review the following requirements:
+        </p>
+
+        <div class="how-it-works-grid">
+          <div class="how-step">
+            <h3>Daily Photo Updates</h3>
+            <p>You'll receive text updates with photos of your bunny every day during their stay, so you can see how they're doing and have peace of mind while you're away.</p>
+          </div>
+          <div class="how-step">
+            <h3>Personalized Care</h3>
+            <p>Each bunny gets individual attention based on their personality and needs. From playtime preferences to dietary requirements, everything is tailored to your pet.</p>
+          </div>
+          <div class="how-step">
+            <h3>Fresh Organic Greens</h3>
+            <p>Daily servings of fresh, organic vegetables supplement their diet, along with unlimited hay and their regular pellets from home.</p>
+          </div>
+        </div>
+
+        <div class="requirements-section">
+          <h3>What to Bring:</h3>
+          <ul>
+            <li><strong>Secure carrier:</strong> Required for safe transport to and from boarding.</li>
+            <li><strong>Food:</strong> Bring your rabbit's usual hay and pellets. I provide additional hay and pellets if needed, but keeping them on their regular diet helps reduce stress and GI upset.</li>
+            <li><strong>Comfort items:</strong> Favorite bed, pellet ball, or blanket—anything familiar can help your bunny feel at home.</li>
+          </ul>
+        </div>
+
+        <div class="requirements-section">
+          <h3>Provided:</h3>
+          <ul>
+            <li>Toys, litter box, bedding, and exercise pens (xpens) are included, so your rabbit will have everything they need for a comfortable, enriching stay.</li>
+          </ul>
+        </div>
+
+        <div class="requirements-section">
+          <h3>Health & Safety:</h3>
+          <ul>
+            <li>Rabbits must be RHD2 vaccinated and up to date at least two weeks before boarding.</li>
+            <li>Veterinary information is required for emergency purposes.</li>
+          </ul>
+        </div>
+
+        <div class="cta-button">
+          <a href="mailto:placeholderemail@gmail.com" class="btn">Book Your Bunny's Stay</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2026 Specialized Rabbit Boarding in Sonoma County</p>
+  </footer>
+
+</body>
+</html>
