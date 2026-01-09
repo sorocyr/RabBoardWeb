@@ -81,7 +81,7 @@
     }
 
     .badge:hover {
-      background: #e8f0e8;
+      background: #e8eaf0;
     }
 
     .btn {
@@ -253,7 +253,7 @@
       border-radius: 50px;
       font-size: 1rem;
       color: #2a2a2a;
-      font-weight: 500;
+      font-weight: 600;
       transition: background 0.3s ease;
     }
 
@@ -436,6 +436,8 @@
       padding: 30px;
       border-radius: 30px;
       transition: background 0.3s ease;
+      display: flex;
+      flex-direction: column;
     }
 
     .how-step:hover {
@@ -444,15 +446,24 @@
 
     .how-step h3 {
       font-size: 1.8rem;
-      margin-bottom: 15px;
+      margin-bottom: 40px;
       color: #2a2a2a;
       font-weight: 700;
+      height: 4.5rem;
+      display: flex;
+      align-items: flex-start;
     }
 
     .how-step p {
       font-size: 1.2rem;
       color: #3a3a3a;
       line-height: 1.7;
+      flex-grow: 1;
+    }
+
+    .how-step .price {
+      margin-top: auto;
+      padding-top: 20px;
     }
 
     .requirements-section {
@@ -656,21 +667,18 @@
       
       <div class="services-grid">
         <div class="service-card">
-          <h3>Single Rabbit Boarding</h3>
-          <p>Spacious enclosures with room to hop and explore, daily exercise time, fresh organic vegetables, and attentive supervision.</p>
-          <div class="price">$35/night</div>
+          <h3>Personalized Care</h3>
+          <p>Each bunny gets individual attention based on their personality and needs. From playtime preferences to dietary requirements, everything is tailored to your pet.</p>
         </div>
 
         <div class="service-card">
-          <h3>Bonded Pair Rabbit Boarding</h3>
-          <p>Keep your bonded buns together! Spacious shared enclosures, daily exercise, fresh organic veggies, and care tailored to each bunny's needs.</p>
-          <div class="price">$45/night</div>
+          <h3>Fresh Organic Greens</h3>
+          <p>Daily servings of fresh, organic vegetables supplement their diet, along with unlimited hay and their regular pellets from home.</p>
         </div>
 
         <div class="service-card">
-          <h3>Exotic Small Animal Boarding</h3>
-          <p>Need boarding for your rat, guinea pig, bird, or other exotic small pet? Every pet receives individualized care in a safe, enriching environment. Email me to discuss suitability and custom rates.</p>
-          <div class="price">Custom rates</div>
+          <h3>Daily Photo Updates</h3>
+          <p>You'll receive text updates with photos of your bunny every day during their stay, so you can see how they're doing and have peace of mind while you're away.</p>
         </div>
       </div>
     </div>
@@ -694,16 +702,19 @@
 
         <div class="how-it-works-grid">
           <div class="how-step">
-            <h3>Daily Photo Updates</h3>
-            <p>You'll receive text updates with photos of your bunny every day during their stay, so you can see how they're doing and have peace of mind while you're away.</p>
+            <h3>Single Rabbit Boarding</h3>
+            <p>Spacious enclosures with room to hop and explore, daily exercise time, fresh organic vegetables, and attentive supervision.</p>
+            <div class="price">$35/night</div>
           </div>
           <div class="how-step">
-            <h3>Personalized Care</h3>
-            <p>Each bunny gets individual attention based on their personality and needs. From playtime preferences to dietary requirements, everything is tailored to your pet.</p>
+            <h3>Bonded Pair Rabbit Boarding</h3>
+            <p>Keep your bonded buns together! Spacious shared enclosures, daily exercise, fresh organic veggies, and care tailored to each bunny's needs.</p>
+            <div class="price">$45/night</div>
           </div>
           <div class="how-step">
-            <h3>Fresh Organic Greens</h3>
-            <p>Daily servings of fresh, organic vegetables supplement their diet, along with unlimited hay and their regular pellets from home.</p>
+            <h3>Exotic Small Animal Boarding</h3>
+            <p>Need boarding for your rat, guinea pig, bird, or other exotic small pet? Every pet receives individualized care in a safe, enriching environment. Email me to discuss suitability and custom rates.</p>
+            <div class="price">Custom rates</div>
           </div>
         </div>
 
@@ -739,7 +750,7 @@
   </section>
 
   <footer>
-    <p>© 2026 Specialized Rabbit Boarding in Sonoma County</p>
+    <p>© 2026 Silver Burrow Boarding ♥</p>
   </footer>
 
 </body>
