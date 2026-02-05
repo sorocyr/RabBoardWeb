@@ -391,53 +391,43 @@
     .pricing-block {
       margin-top: auto;
       padding-top: 24px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0;
     }
 
-    .price-row {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      margin-bottom: 8px;
+    .price-option {
+      padding: 16px 0;
     }
 
-    .price-row:last-child {
-      margin-bottom: 0;
+    .price-option:first-child {
+      border-right: 1px solid rgba(0,0,0,0.08);
+      padding-right: 20px;
     }
 
-    .price-amount {
-      font-size: 1.6rem;
+    .price-option:last-child {
+      padding-left: 20px;
+    }
+
+    .price-option-label {
+      font-size: 0.85rem;
+      color: #6a6a6a;
+      font-weight: 600;
+      letter-spacing: 0.03em;
+      margin-bottom: 6px;
+    }
+
+    .price-option-amount {
+      font-size: 1.5rem;
       font-weight: 700;
       color: #2a2a2a;
-      line-height: 1;
+      line-height: 1.2;
     }
 
-    .price-label {
+    .price-option-amount span {
       font-size: 0.95rem;
-      color: #5a5a5a;
       font-weight: 400;
-    }
-
-    .price-extended {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
-
-    .price-extended .price-amount {
-      font-size: 1.35rem;
-      color: #3a6b3a;
-    }
-
-    .save-badge {
-      display: inline-block;
-      background: #3a6b3a;
-      color: #fff;
-      font-size: 0.75rem;
-      font-weight: 700;
-      padding: 3px 10px;
-      border-radius: 50px;
-      letter-spacing: 0.03em;
-      line-height: 1.4;
+      color: #5a5a5a;
     }
 
     /* Booking Section - Light Green */
@@ -764,14 +754,13 @@
             <h3>Single Rabbit Boarding</h3>
             <p>Spacious enclosures with room to hop and explore, daily exercise time, fresh organic vegetables, and attentive supervision.</p>
             <div class="pricing-block">
-              <div class="price-row">
-                <span class="price-amount">$33</span>
-                <span class="price-label">/ night</span>
+              <div class="price-option">
+                <div class="price-option-label">Per night</div>
+                <div class="price-option-amount">$33 <span>/ night</span></div>
               </div>
-              <div class="price-row price-extended">
-                <span class="price-amount">$30</span>
-                <span class="price-label">/ night for 7+ days</span>
-                <span class="save-badge">SAVE 10%</span>
+              <div class="price-option">
+                <div class="price-option-label">Extended (7+ days)</div>
+                <div class="price-option-amount">$30 <span>/ night</span></div>
               </div>
             </div>
           </div>
@@ -779,25 +768,20 @@
             <h3>Bonded Pair Rabbit Boarding</h3>
             <p>Keep your bonded buns together! Spacious shared enclosures, daily exercise, fresh organic veggies, and care tailored to each bunny's needs.</p>
             <div class="pricing-block">
-              <div class="price-row">
-                <span class="price-amount">$40</span>
-                <span class="price-label">/ night</span>
+              <div class="price-option">
+                <div class="price-option-label">Per night</div>
+                <div class="price-option-amount">$40 <span>/ night</span></div>
               </div>
-              <div class="price-row price-extended">
-                <span class="price-amount">$36</span>
-                <span class="price-label">/ night for 7+ days</span>
-                <span class="save-badge">SAVE 10%</span>
+              <div class="price-option">
+                <div class="price-option-label">Extended (7+ days)</div>
+                <div class="price-option-amount">$36 <span>/ night</span></div>
               </div>
             </div>
           </div>
           <div class="how-step">
             <h3>Exotic Small Animal Boarding</h3>
             <p>Need boarding for your rat, guinea pig, bird, or other exotic small pet? Every pet receives individualized care in a safe, enriching environment. Email me to discuss suitability and custom rates.</p>
-            <div class="pricing-block">
-              <div class="price-row">
-                <span class="price-amount">Custom rates</span>
-              </div>
-            </div>
+            <div class="price">Custom rates</div>
           </div>
         </div>
 
