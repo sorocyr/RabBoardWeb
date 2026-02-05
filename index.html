@@ -27,7 +27,7 @@
     }
 
     .container {
-      max-width: 1200px;
+      max-width: 1400px;
       margin: 0 auto;
       padding: 0 40px;
     }
@@ -48,8 +48,8 @@
 
     #hero .container {
       display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 80px;
+      grid-template-columns: 2fr 1fr;
+      gap: 60px;
       align-items: center;
     }
 
@@ -202,7 +202,7 @@
       display: grid;
       grid-template-columns: 400px 1fr;
       gap: 60px;
-      align-items: start;
+      align-items: center;
       margin-bottom: 50px;
     }
 
@@ -308,28 +308,6 @@
       display: block;
     }
 
-    .carousel-dots {
-      display: flex;
-      justify-content: center;
-      gap: 10px;
-      margin-top: 30px;
-    }
-
-    .carousel-dot {
-      width: 12px;
-      height: 12px;
-      border-radius: 50%;
-      background: #f5f1e8;
-      border: none;
-      cursor: pointer;
-      transition: background 0.3s;
-      padding: 0;
-    }
-
-    .carousel-dot.active {
-      background: #2a2a2a;
-    }
-
     @media (max-width: 768px) {
       .carousel-slide {
         min-width: 100%;
@@ -408,6 +386,58 @@
       font-weight: 700;
       color: #2a2a2a;
       margin-top: 20px;
+    }
+
+    .pricing-block {
+      margin-top: auto;
+      padding-top: 24px;
+    }
+
+    .price-row {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 8px;
+    }
+
+    .price-row:last-child {
+      margin-bottom: 0;
+    }
+
+    .price-amount {
+      font-size: 1.6rem;
+      font-weight: 700;
+      color: #2a2a2a;
+      line-height: 1;
+    }
+
+    .price-label {
+      font-size: 0.95rem;
+      color: #5a5a5a;
+      font-weight: 400;
+    }
+
+    .price-extended {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .price-extended .price-amount {
+      font-size: 1.35rem;
+      color: #3a6b3a;
+    }
+
+    .save-badge {
+      display: inline-block;
+      background: #3a6b3a;
+      color: #fff;
+      font-size: 0.75rem;
+      font-weight: 700;
+      padding: 3px 10px;
+      border-radius: 50px;
+      letter-spacing: 0.03em;
+      line-height: 1.4;
     }
 
     /* Booking Section - Light Green */
@@ -673,10 +703,6 @@
           </div>
         </div>
       </div>
-      <div class="carousel-dots" id="carouselDots">
-        <button class="carousel-dot active" aria-label="Slide 1"></button>
-        <button class="carousel-dot" aria-label="Slide 2"></button>
-      </div>
     </div>
   </section>
 
@@ -695,7 +721,7 @@
         <div class="badge">Forestville Home Boarding</div>
       </div>
       <p class="services-intro">
-        Everybunny gets personalized attention, spacious accommodations, fresh food and water daily, and plenty of enrichment activities. Have questions about my boarding services? Send me an email at <a href="mailto:placeholderemail@gmail.com">placeholderemail@gmail.com</a>
+        Everybunny gets personalized attention, spacious accommodations, fresh food and water daily, and plenty of enrichment activities. Have questions about my boarding services? Send me an email at <a href="mailto:soro@silverburrow.com">soro@silverburrow.com</a>
       </p>
       
       <div class="services-grid">
@@ -730,24 +756,48 @@
       <div class="booking-content">
         <h2>Booking & Requirements</h2>
         <p class="booking-intro">
-          Booking a stay is simple—just get in touch via email at <a href="mailto:placeholderemail@gmail.com">placeholderemail@gmail.com</a> to reserve your bunny's spot. To ensure a smooth, stress-free experience for every guest, please review the following requirements:
+          Booking a stay is simple—just get in touch via email at <a href="mailto:soro@silverburrow.com">soro@silverburrow.com</a> to reserve your bunny's spot. To ensure a smooth, stress-free experience for every guest, please review the following requirements:
         </p>
 
         <div class="how-it-works-grid">
           <div class="how-step">
             <h3>Single Rabbit Boarding</h3>
             <p>Spacious enclosures with room to hop and explore, daily exercise time, fresh organic vegetables, and attentive supervision.</p>
-            <div class="price">$35/night</div>
+            <div class="pricing-block">
+              <div class="price-row">
+                <span class="price-amount">$33</span>
+                <span class="price-label">/ night</span>
+              </div>
+              <div class="price-row price-extended">
+                <span class="price-amount">$30</span>
+                <span class="price-label">/ night for 7+ days</span>
+                <span class="save-badge">SAVE 10%</span>
+              </div>
+            </div>
           </div>
           <div class="how-step">
             <h3>Bonded Pair Rabbit Boarding</h3>
             <p>Keep your bonded buns together! Spacious shared enclosures, daily exercise, fresh organic veggies, and care tailored to each bunny's needs.</p>
-            <div class="price">$45/night</div>
+            <div class="pricing-block">
+              <div class="price-row">
+                <span class="price-amount">$40</span>
+                <span class="price-label">/ night</span>
+              </div>
+              <div class="price-row price-extended">
+                <span class="price-amount">$36</span>
+                <span class="price-label">/ night for 7+ days</span>
+                <span class="save-badge">SAVE 10%</span>
+              </div>
+            </div>
           </div>
           <div class="how-step">
             <h3>Exotic Small Animal Boarding</h3>
             <p>Need boarding for your rat, guinea pig, bird, or other exotic small pet? Every pet receives individualized care in a safe, enriching environment. Email me to discuss suitability and custom rates.</p>
-            <div class="price">Custom rates</div>
+            <div class="pricing-block">
+              <div class="price-row">
+                <span class="price-amount">Custom rates</span>
+              </div>
+            </div>
           </div>
         </div>
 
@@ -776,7 +826,7 @@
         </div>
 
         <div class="cta-button">
-          <a href="mailto:placeholderemail@gmail.com" class="btn">Book Your Bunny's Stay</a>
+          <a href="mailto:soro@silverburrow.com" class="btn">Book Your Bunny's Stay</a>
         </div>
       </div>
     </div>
@@ -789,7 +839,6 @@
   <script>
     (function() {
       var track = document.getElementById('carouselTrack');
-      var dots = document.querySelectorAll('.carousel-dot');
       var currentIndex = 0;
       var totalSlides = 4;
       var slidesVisible = window.innerWidth <= 768 ? 1 : 3;
@@ -798,9 +847,6 @@
       function updateCarousel() {
         var percentage = (currentIndex * 100) / totalSlides;
         track.style.transform = 'translateX(-' + percentage + '%)';
-        dots.forEach(function(dot, i) {
-          dot.classList.toggle('active', i === currentIndex);
-        });
       }
 
       function nextSlide() {
@@ -808,21 +854,7 @@
         updateCarousel();
       }
 
-      dots.forEach(function(dot, i) {
-        dot.addEventListener('click', function() {
-          currentIndex = i;
-          updateCarousel();
-        });
-      });
-
-      var interval = setInterval(nextSlide, 4000);
-
-      track.parentElement.addEventListener('mouseenter', function() {
-        clearInterval(interval);
-      });
-      track.parentElement.addEventListener('mouseleave', function() {
-        interval = setInterval(nextSlide, 4000);
-      });
+      setInterval(nextSlide, 4000);
 
       window.addEventListener('resize', function() {
         slidesVisible = window.innerWidth <= 768 ? 1 : 3;
